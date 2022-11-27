@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmitLoader.Tester\EmitLoader.Tester.csproj" />
+    <ProjectReference Include="..\EmitLoader\EmitLoader.csproj" />
+  </ItemGroup>
+
+</Project>

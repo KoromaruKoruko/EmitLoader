@@ -1,0 +1,5 @@
+
+# just a basic git ignore, don't need anything fancy just yet.
+.vs/
+*/bin/
+*/obj/

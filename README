@@ -1,0 +1,17 @@
+Emit Loader is a POC DLL dynamic runtime loader, which will be extended in the near future to provide mixin and runtime modification possibilities.
+
+Currently its main and only function is to provide a dynamic load context option for .Net Framework without the use of AppDomains and transparent proxys.
+
+Emit Loader loads the target DLL directly into the current AppDomain as a Dynamic Assembly and provides simple security over what is accessible to the loaded DLL. As the DLL is loaded as a Dynamic Assembly once all references to said Assembly are removed or inaccessible the Assembly will be unloaded during the next GC cycle.
+
+Note: this library is currently useless for .Net Core and .Net Unified as AssemblyLoadContext fufills this feature with less overhead and in a vastly more optimized way.
+
+
+This Library will be re-written in order to provide additional more useful features such as:
+- Function Redirection/Misdirection.
+- Type Manipulation
+- Function Fixup (Supplying Host Defined Extern Functions during load time)
+- More indepth Access Control and Security Enforcement.
+- Type Redirection/Misdirection (think Host Defined Standard Library Types)
+- Function Manipulation much like how Harmony allows Function Concatination, but directly embued into the function definition without the need for function swaps and call chains.
+- Function Multiversioning at loadtime (Load Specific Function Definition based on predefined conditions, such as SIMD support/OS platform)
